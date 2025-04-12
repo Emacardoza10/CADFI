@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CADHACK</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>CADHACK</h1>
+        <p>Tu guía diaria con propósito</p>
+    </header>
+    <main>
+        <section class="card animated fadeIn" id="quote-section">
+            <h2>Frase del Día</h2>
+            <p id="quote"></p>
+        </section>
+
+        <section class="card animated fadeIn" id="feeling-section">
+            <h2>¿Cómo te sientes hoy, Ema?</h2>
+            <input type="text" id="feeling-input" placeholder="Escribe aquí..."/>
+            <button onclick="getAdvice()">Obtener consejo</button>
+            <p id="advice"></p>
+        </section>
+
+        <section class="card animated fadeIn" id="spiritual-section">
+            <h2>Tu momento con Dios</h2>
+            <p id="bible-verse"></p>
+            <textarea placeholder="Escribe tu oración o reflexión..."></textarea>
+        </section>
+
+        <section class="card animated fadeIn" id="diary-section">
+            <h2>Diario Personal</h2>
+            <textarea id="diary-entry" placeholder="Escribe lo que quieras guardar hoy..."></textarea>
+            <button onclick="saveDiary()">Guardar</button>
+        </section>
+
+        <section class="card animated fadeIn" id="books-section">
+            <h2>Libros para tus metas</h2>
+            <ul id="book-list"></ul>
+        </section>
+
+        <section class="card animated fadeIn" id="ai-friend">
+            <h2>Habla con tu bro AI</h2>
+            <div class="chat-box" id="chat-box"></div>
+            <input type="text" id="ai-input" placeholder="Pregúntame lo que quieras"/>
+            <button onclick="talkToFriend()">Enviar</button>
+        </section>
+
+        <section class="card animated fadeIn" id="wise-ai">
+            <h2>Consejo Sabio</h2>
+            <input type="text" id="decision-input" placeholder="¿Qué decisión estás por tomar?"/>
+            <button onclick="getWiseAdvice()">Pedir consejo</button>
+            <p id="wise-advice"></p>
+        </section>
+
+        <section class="card animated fadeIn" id="goals-section">
+            <h2>Mis Metas</h2>
+            <textarea id="goals" placeholder="Escribe tus metas aquí..."></textarea>
+        </section>
+    </main>
+    <footer>
+        <p>Con cariño, tu bro ChatGPT</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
